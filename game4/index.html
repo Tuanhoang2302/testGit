@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Phaser 3 React Template</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<style>
+			body {
+				background-color: #e6e6e6;
+			}
+		</style>
+		<script type="module" src="./src/Scenes/Test1.js"></script>
+		<script type="module" src="./src/InputForm/answer.js"></script>
+		<script type="text/javascript" src="./src/InputForm/language.js"></script>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body background="./bg.png">
+		<div class ="background">
+			<div id= "phaser-example">
+				<a href="https://dragonlearn.in/teachers/g/61649/subjects/1/course_programs/1/lessons/16306" div="back">
+					<div id="iconBack">
+					 <div class="re"></div>
+					</div>
+					<div id="back">Back</div>
+				</a>
+				<div id="bar">
+					<img src="./src/assets/thanh.png">;
+					<div id = "ball1" class ="ball">
+						<img style="width: 100%; height: 100%;" src="./src/assets/ball.png">
+					</div>
+					<div id = "ball2" class ="ball">
+						<img style="width: 100%; height: 100%;" src="./src/assets/ball.png">
+					</div>
+					<div id = "ball3" class ="ball">
+						<img style="width: 100%; height: 100%;" src="./src/assets/ball.png">
+					</div>
+					<div id = "ball4" class ="ball">
+						<img style="width: 100%; height: 100%;" src="./src/assets/ball.png">
+					</div>
+					<div id = "ball5" class ="ball">
+						<img style="width: 100%; height: 100%;" src="./src/assets/ball.png">
+					</div>
+					<div id = "ball6" class ="ball">
+						<img style="width: 100%; height: 100%;" src="./src/assets/ball.png">
+					</div>
+				</div>
+				<ul class="languages">
+					<li class = "active">language</li>
+					<li class = "non-active"><a id="english" href="#english" onclick="English()" >English</a></li>
+					<li class ="non-active"><a id="vietnamese" href="#vietnam" onclick="Vietnamese()">Vietnamese</a></li>
+				</ul>
+
+			</div>
+		</div>
+		
+		<script>
+			$(function () {
+
+    			$el_languages = $('.languages');
+    			$el_languages.hover(function () {
+					$el_languages.find('li').show();
+    			}, function () {
+					$el_languages.find('.non-active').hide();
+					
+    			});
+			});
+		</script>
+		
+	<script type="text/javascript" src="bundle.min.js"></script></body>
+</html>
