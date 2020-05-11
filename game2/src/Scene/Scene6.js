@@ -45,6 +45,17 @@ class Scene6  extends Phaser.Scene{
             this.resetball();
         }
         this.Language();
+        this.Focus();
+    }
+    Focus()
+    {
+            $(document).ready(function () {
+                var  value = $('#nu29').val();
+                if (!value)
+                {  
+                    $('#nu29').focus();
+                }
+           })
     }
     Language(){
         if(window.location.hash == "#vietnam"){
@@ -65,9 +76,7 @@ class Scene6  extends Phaser.Scene{
         if (ball[6].x<719-26*5)
         {
             ball[6].x+=speed;
-        }else{
-			window.location.href = '../../testGit/complete/page/indexEnd.html';
-		}
+        }
     }
     resetball()
     {
