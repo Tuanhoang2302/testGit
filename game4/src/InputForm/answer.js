@@ -1,3 +1,4 @@
+
 window.Check_SubAnswer1 = function Check_SubAnswer1(desiredResult) {
   if (document.getElementById('input1').value != '') {
     const x = document.getElementById('input1').value % 10;
@@ -9,7 +10,7 @@ window.Check_SubAnswer1 = function Check_SubAnswer1(desiredResult) {
       document.getElementById('input1').style.color = 'red';
     }
   }
-}
+};
 
 window.Check_SubAnswer2 = function Check_SubAnswer2() {
   if (document.getElementById('input2').value != '') {
@@ -22,4 +23,5 @@ window.Check_SubAnswer2 = function Check_SubAnswer2() {
       document.getElementById('input2').style.color = 'red';
     }
   }
-}
+};
+

@@ -11,6 +11,9 @@ export var isBallChange = false;
 export function setChange(Bool) {
   isBallChange = Bool;
 }
+
+var m = false;
+var once = true;
 const RANGEBOX = {
   X: 270,
   Y: 150,
@@ -57,8 +60,9 @@ export default class Scene1 extends Phaser.Scene {
   }
 
   update() {
-    console.log(isBallChange);
-
+    if (once) {
+      this.isTimeDelayApple = m;
+    }
     this.MoveApple(this);
     this.DisplayBox(this);
     this.DisplayQuestion(this);
@@ -121,7 +125,6 @@ export default class Scene1 extends Phaser.Scene {
       other.fade.FdOut(other.appleInBox[other.completedFillBox - 1]);
       // other.appleInBox.setAlpha(1);
       if (other.completedFillBox < other.totalBox) {
-        // other.isMoveApple = true;
         other.isTimeDelayApple = true;
       } else {
         other.isDisplayQuestion = true;
@@ -317,7 +320,7 @@ export default class Scene1 extends Phaser.Scene {
     this.destinationPosY = [];
     this.isMoveApple = false;
     this.Index = -1;
-    this.isTimeDelayApple = true;
+    this.isTimeDelayApple = false;
     this.isTimeDelayBox = false;
     this.isDisplayBox = false;
     this.isCheckResult = false;
@@ -337,3 +340,46 @@ export default class Scene1 extends Phaser.Scene {
     this.totalBox = 3;
   }
 }
+
+
+window.OverStart = function OverStart() {
+  const start = document.getElementById('button_start');
+  const ciSmall = document.getElementById('CircleRound');
+  const ciBig = document.getElementById('CircleRoundall');
+  start.style.backgroundPositionY = '-112px';
+  start.style.top = '-405px';
+  start.style.right = '-135px';
+  ciSmall.style.width = '260px';
+  ciSmall.style.height = '260px';
+  ciSmall.style.top = '-215px';
+  ciSmall.style.right = '-53px';
+  ciBig.style.width = '364px';
+  ciBig.style.height = '364px';
+};
+
+
+window.OutStart = function OutStart() {
+  const start = document.getElementById('button_start');
+  const ciSmall = document.getElementById('CircleRound');
+  const ciBig = document.getElementById('CircleRoundall');
+  start.style.backgroundPositionY = '10px';
+  start.style.top = '-383px';
+  start.style.right = '-112px';
+
+  ciSmall.style.width = '250px';
+  ciSmall.style.height = '250px';
+  ciSmall.style.top = '-191px';
+  ciSmall.style.right = '-40px';
+
+  ciBig.style.width = '330px';
+  ciBig.style.height = '330px';
+};
+
+window.Start = function Start() {
+  document.getElementById('start').style.display = 'none';
+  document.getElementById('phaser-example').style.filter = 'blur(0px)';
+  m = true;
+  setTimeout(() => {
+    once = false;
+  }, 20);
+};
