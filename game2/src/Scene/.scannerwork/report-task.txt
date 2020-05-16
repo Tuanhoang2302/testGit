@@ -1,6 +1,0 @@
-projectKey=PhaserProject
-serverUrl=http://localhost:9000
-serverVersion=8.3.0.34182
-dashboardUrl=http://localhost:9000/dashboard?id=PhaserProject
-ceTaskId=AXH8Y48zXrRIXhJEeY5Q
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXH8Y48zXrRIXhJEeY5Q
