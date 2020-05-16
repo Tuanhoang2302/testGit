@@ -71,6 +71,7 @@ export default class GameScene extends Phaser.Scene {
     blockArr.push((new Block()).createABlock(this, 400, 600));
     for (let i = 0; i < blockArr.length; i++) {
       blockArr[i].body.debugShowBody = false;
+	  blockArr[i].body.debugShowVelocity = false;
     }
 
     for (let i = 0; i < numberOfBox; i++) {
