@@ -41,6 +41,17 @@
                 left: 0px;
                 top: 0px;
             }
+            .background{
+                width: 1050px;
+    background-color:#ffffff;
+    height: 660px;
+    position: relative;
+    margin: auto;
+    margin-top: 0px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.5),
+    0px 2px 4px 0px rgba(0,0,0,0.5);
+              }
             
             .container {
                 background-position: center;
@@ -92,7 +103,7 @@
             #back {
                 font-size: 22px;
                 font-family: Arial;
-                margin-left: 10px;
+                
                 margin-top: 10px;
                 position: absolute;
                 color: darkcyan;
@@ -101,3 +112,30 @@
             #back:hover {
                 color: blue;
             }
+
+            #back{
+                font-size: 22px;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-left: 20px;
+                line-height: 50px;
+                top: -10px;
+              }
+              #iconBack{
+                border-bottom: 15px solid transparent;
+                border-top: 15px solid transparent;
+                border-right: 15px solid #246EA1;
+                border-radius: 50%;
+                position: absolute;
+                top: 10px;
+                width:0;
+                height:0;
+              }
+              .re{
+                background-color: #ffffff;
+                transform: rotate(45deg);
+                width:14px;
+                height:14px;
+                position: absolute;
+                top:-7px;
+                left:8px;
+              }
